@@ -1,0 +1,95 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+@media(max-width: 830px){
+  body{
+    min-width: 820px;
+  }
+}
+@media(max-height: 670px){
+  body{
+    min-height: 663px;
+  }
+}
+
+/*-------------------------------*/
+
+.wrapper{
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.canvas-container{
+  width: 100%;
+  height: 100%;
+  border: solid 2px red;
+}
+
+.video-container{
+  position: absolute;
+  width: 90%;
+  height: 60%;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: solid 2px black;
+
+  z-index: 5100;
+  display: none;
+}
+
+.wrapper .close-button{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  left: 25px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+
+  transition: filter 0.2s;
+  display: none;
+  z-index: 7500;
+}
+
+.close-button i{
+  font-size: 32px;
+}
+
+.close-button:hover{
+  cursor: pointer;
+  filter: brightness(0.8);
+  z-index: 7501;
+}
+
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.98);
+}
